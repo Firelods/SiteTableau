@@ -1,0 +1,35 @@
+
+
+nav ul {
+    list-style: none;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    padding-left: 5px;
+}
+
+nav{
+    width: 100%;
+    background-color: rgb(59, 59, 59);
+    display: block;
+    height: 8vh;
+    float:left;
+}
+
+ul li{
+    display: inline-block;
+    padding:8px;
+    color:white;
+}
+
+ul li a{
+    text-decoration: none;
+}
+ul li a:visited{
+    color:white;
+}
+
+ul li:hover{
+    border: 1px solid white;
+}
