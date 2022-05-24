@@ -1,31 +1,136 @@
-ul{
-    display :flex;
-    width:90%;
-    /* height:90vh; */
-    margin-left:5%;
-    background-color:lightgray;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style-type:none;
+ul {
+  display: flex;
+  width: 90%;
+  /* height:90vh; */
+  margin-left: 5%;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style-type: none;
 }
 
-li{
-    display:flex;
-    align-items: center;
-    width:100%;
-    height:25vh;
-    border-radius: 12px;
-    background-color:rgb(153, 153, 153);
-    margin-top:5vh;
+li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45vh;
+  border-radius: 4px;
+  background-color: rgb(206, 206, 206);
+  margin-top: 5vh;
+  -webkit-box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 0px 16px 46px 13px rgba(0, 0, 0, 0.54);
+  box-shadow: 5px 5px 5px 0px #000000, inset 4px 4px 15px 0px #000000, 0px 16px 46px 13px rgba(0, 0, 0, 0.54);
 }
 
-li img{
-    width:20%;
+li img {
+  margin-left: 5vw;
+  width: 40vw;
+  max-width: 40vh;
 }
 
-li span{
-    margin-left: 30%;
-    font-size:2em;
-    top: -40%;
-    position:relative;
+li a {
+  margin-left: 25vw;
+  font-size: 2em;
+  /* top: -40%; */
+  position: absolute;
+  margin-top: -38vh;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+li a:visited, li a{
+  color:black;
+}
+li a:hover{
+  color:rgb(4, 201, 30);
+  font-size:2.5em;
+}
+
+
+table {
+  width: 40%;
+}
+
+td {
+  margin-bottom: 2vh;
+  border: 1px solid #333;
+}
+
+#typePeinture,
+#auteur {}
+
+#containerCaract {
+  display: flex;
+  justify-content: space-around;
+  width: fit-content;
+  flex-wrap: wrap;
+}
+
+#auteur {
+  /* margin-right:20vw; */
+}
+
+#Etage1,
+#Etage2 {
+
+  width: 80%;
+
+}
+
+#containerCaract div div {
+  padding: 10px;
+  margin-bottom: 1vh;
+  border-radius: 12px;
+  background-color: rgb(241, 241, 241);
+  height: fit-content;
+  width: fit-content;
+}
+
+#prix {
+  font-size: 2em;
+}
+
+#ajoutPanier {
+  margin-top: 5vh;
+  padding: 10px;
+  background-color: rgb(83, 160, 73);
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  height: max-content;
+}
+
+.grandeImg,
+.grandeImg img {
+
+  width: 65vw;
+  /* height:90vh; */
+}
+
+.grandeImg img {
+
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  z-index: 50;
+}
+
+.grandeImg {
+  position: fixed;
+  top: 2vh;
+  left: 17.5vw;
+  display: none;
+}
+
+.grandeImg {
+  animation: animatezoom 0.6s
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }

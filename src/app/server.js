@@ -36,11 +36,11 @@ MongoClient.connect(url, function (err, db) {
 
   //!Recherche par id
   app.get("/select/:id", function (req, res) {
-    dbo.collection("tableau").find({idINT:req.params.id.toString()}).toArray(function (err, result){
+    dbo.collection("tableau").findOne({'idINT':req.params.id.toString()}).then(result =>{
       let json = JSON.stringify(result);
-      console.log(json);
-      res.end(json);
-    })
+      console.log(result);
+      res.end(json);  
+  })
   });
 
 
@@ -52,21 +52,3 @@ MongoClient.connect(url, function (err, db) {
     }));
   })
 });
-// console.log("test : ",dbco.type)
-// console.log(result1)
-var Schema = mongo.Schema;
-
-var UsersSchema = new Schema({
-  id: {
-    Type: String
-  },
-  type: {
-    Type: String
-  },
-  nom: {
-    Type: String
-  },
-  prix: {
-    Type: Number
-  }
-})

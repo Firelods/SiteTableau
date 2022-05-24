@@ -7,4 +7,7 @@ export interface Tableau {
     titre:string;
     prix:number;
     idINT:string;
+    auteur:string;
+    date:number;
+    dimension:string;
 }

@@ -4,16 +4,16 @@ nav ul {
     list-style: none;
     display:flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 100%;
     padding-left: 5px;
 }
 
 nav{
     width: 100%;
-    background-color: rgb(59, 59, 59);
+    background-color: rgb(48, 24, 24);
     display: block;
-    height: 8vh;
+    height: 16vh;
     float:left;
 }
 
@@ -21,6 +21,7 @@ ul li{
     display: inline-block;
     padding:8px;
     color:white;
+    font-size:1.8em;
 }
 
 ul li a{
@@ -29,7 +30,16 @@ ul li a{
 ul li a:visited{
     color:white;
 }
-
+#logo{
+    width:10vw;
+    min-width: 100px;
+}
 ul li:hover{
     border: 1px solid white;
+}
+
+h1{
+    padding-top:15vh;
+    padding-left: 35vw;
+    /* padding: 5vh; */
 }

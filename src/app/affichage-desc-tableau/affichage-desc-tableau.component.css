@@ -1,0 +1,14 @@
+#containerDesc{
+    width:80vw;
+    height:80vh;
+    background-color:rgb(245, 243, 111);
+    margin:0 auto;
+    border-radius: 12px;
+    display:flex;
+    justify-content:center;
+}
+h2{
+    margin-top: 5vh;
+    font-size: 3em;
+    font-family: 'Inconsolata', monospace;
+}

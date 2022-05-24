@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class TableauService {
-  private tableauURL="http://localhost:8810"
+  private tableauURL="http://db.clement-lefevre.fr"
   private test="tet"
   constructor(
     private http:HttpClient
@@ -20,5 +20,10 @@ export class TableauService {
   getTableaux(): Observable<Tableau[]> {
     console.log(this.http.get<Tableau[]>(this.tableauURL).subscribe(tableau => console.log(tableau)));
     return this.http.get<Tableau[]>(this.tableauURL)
+  }
+
+  getTableau(id: number): Observable<Tableau>{
+    
+    return this.http.get<Tableau>(this.tableauURL+"/select/"+id);
   }
 }

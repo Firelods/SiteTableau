@@ -1,5 +1,27 @@
-<p>affichage-tableaux works!</p>
+
 <ul>
-  <li>exemple</li>
-  <li *ngFor="let tableau of tableaux">{{tableau.idINT}} <img src="../../assets/img/okusai.png" alt="okusai"><span>{{tableau.titre}}</span></li>
+  <li *ngFor="let tableau of tableaux">
+    <!-- grande div pour img plein écran -->
+    
+    <img onclick="onClick(this)" class="imgTableau" id="c{{tableau.idINT}}"src="../../assets/img/{{tableau.titre}}.jpg" alt="okusai">
+    <div id="containerCaract">
+      <div id="Etage1">
+        <div id="typePeinture">
+          <p>Type de peinture : {{tableau.type}}</p>
+        </div>
+        <div id="auteur">
+          <p>Auteur : {{tableau.auteur}}</p>
+        </div>
+      </div>
+      <div id="Etage2">
+        <div id="dimensions">Dimensions : {{tableau.dimension}}</div>
+        <div id="date">Date : {{tableau.date}}</div>
+      </div>
+    </div>
+    <div id="pricing">
+      <div id="prix"> Prix : {{tableau.prix}}€</div> <button id="ajoutPanier">Ajouter au panier</button>
+    </div>
+    <a routerLink="/detail/{{tableau.idINT}}">{{tableau.titre}}</a>
+  </li>
 </ul>
+<div id="divgrande" onclick="this.style.display='none'" class="grandeImg"><img class="imgTableau" id="grande"  alt="okusai"></div>
