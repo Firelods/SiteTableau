@@ -6,16 +6,26 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
+<div class="headerLogo">
+  <img src="../assets/img/logo.png" id="logo" alt="logo site">
+  <form action="" class="search-bar">
+    <input type="search" name="search" pattern=".*\S.*" required>
+    <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+  </form>
+  <div class="panier"><span class="material-symbols-outlined">
+    shopping_cart</span><a href="#">Panier</a></div>
+</div>
 <nav>
   <ul>
-    <li><img src="../assets/img/logo.png" id="logo" alt="logo site"></li>
     <li><a href="#">Mes Tableaux</a></li>
     <li><a href="#">Contact</a></li>
+    <li><a href="#">A propos</a></li>
   </ul>
 </nav>
 <main>
-<h1>{{title}}</h1>
+  <h1>{{title}}</h1>
 
 </main>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
