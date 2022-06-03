@@ -1,6 +1,10 @@
 a:visited{
     color:unset;
 }
+a{
+	text-decoration: none;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -20,11 +24,11 @@ nav {
 
 }
 
-ul {
+nav ul {
   margin-left: 15vw;
 }
 
-ul li {
+nav ul li {
   display: inline-block;
   padding: 8px;
   margin-right: 5vw;
@@ -32,15 +36,15 @@ ul li {
   font-size: 1.5em;
 }
 
-ul li a {
+nav ul li a {
   text-decoration: none;
 }
 
-ul li a:visited {
+nav ul li a:visited {
   color: rgb(0, 0, 0);
 }
 
-ul li:hover {
+nav ul li:hover {
   border: 1px solid white;
 }
 
@@ -73,7 +77,47 @@ h1 {
     font-style:bold;
     display:flex;
     font-size: 1.3em;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
+
+.panier:hover{
+	background-color:var(--couleur-panier-hover);
+}
+
+/*! *************************************************** FOOTER CODE ****************************************************/
+footer{
+	margin-top: 10vh;
+	/* position:absolute;
+	bottom:0; */
+	
+	background-color: var(--couleur-navigation);
+	
+}
+#listeFooter ul{
+	list-style: none;
+}
+footer ul li{
+	color:black;
+	font-size: 1.2em;
+	padding:10px;
+}
+footer ul li:first-of-type{
+	font-weight:bold;
+}
+footer div#listeFooter{
+	display:flex;
+	width:100vw;
+	justify-content:space-around;
+}
+#copyright{
+	padding-bottom:2vh;
+	text-align:center;
+	font-style: oblique;
+}
+
+
+
 @media (max-width: 768px) {
     .headerLogo{
         margin-left: 25vw;
@@ -86,6 +130,9 @@ h1 {
     .panier{
         margin-bottom: 20px;
     }
+	nav ul{
+		margin-left: 0;
+	}
     
 }
 

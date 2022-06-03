@@ -1,11 +1,4 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- Site Web developpé par Clément LEFEVRE -->
 <div class="headerLogo">
   <img src="../assets/img/logo.png" id="logo" alt="logo site">
   <form action="" class="search-bar">
@@ -15,7 +8,7 @@
     </button>
   </form>
   <div class="panier"><span class="material-symbols-outlined">
-    shopping_cart</span><a href="#">Panier</a></div>
+      shopping_cart</span><a href="#">Panier</a><br><span>Article du panier : {{nbArticle}}</span></div>
 </div>
 <nav>
   <ul>
@@ -26,14 +19,27 @@
 </nav>
 <main>
   <h1>{{title}}</h1>
-
 </main>
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<router-outlet></router-outlet>
+
+
+<router-outlet></router-outlet> <!-- Angular Outlet-->
+
+
+<footer>
+  <div id="listeFooter">
+    <ul>
+      <li><a href="#">Les Tableaux</a></li>
+      <li><a href="#">Affichage général</a></li>
+      <li><a href="#">Description</a></li>
+      <li><a href="#"></a></li>
+    </ul>
+    <ul>
+      <li><a href="#">A Propos</a></li>
+      <li><a href="#">Auteur</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Carrière</a></li>
+    </ul>
+  </div>
+  <div id="copyright"><span>@ClementLEFEVRE2022</span></div>
+</footer>

@@ -19,7 +19,7 @@
       </div>
     </div>
     <div id="pricing">
-      <div id="prix"> Prix : {{tableau.prix}}€</div> <button id="ajoutPanier">Ajouter au panier</button>
+      <div id="prix"> Prix : {{tableau.prix}}€</div> <div id="ajoutPanier" (click)="addArticle()"><div class="couleurHover"></div> <div id="textPanier"> Ajouter au panier</div></div>
     </div>
     <a routerLink="/detail/{{tableau.idINT}}">{{tableau.titre}}</a>
   </li>

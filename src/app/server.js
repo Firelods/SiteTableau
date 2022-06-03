@@ -36,7 +36,10 @@ MongoClient.connect(url, function (err, db) {
 
   //!Recherche par id
   app.get("/select/:id", function (req, res) {
-    dbo.collection("tableau").findOne({'idINT':req.params.id.toString()}).then(result =>{
+    dbo.collection("tableau").findOne({'idINT':req.params.id}).then(result =>{
+      if(result.length == 0){
+        res.status(404);
+      }
       let json = JSON.stringify(result);
       console.log(result);
       res.end(json);  

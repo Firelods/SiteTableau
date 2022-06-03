@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AffichageTableauxComponent } from './affichage-tableaux/affichage-tableaux.component';
 import { AffichageDescTableauComponent } from './affichage-desc-tableau/affichage-desc-tableau.component';
+import { PanierComponent } from './panier/panier.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AffichageTableauxComponent,
-    AffichageDescTableauComponent
+    AffichageDescTableauComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

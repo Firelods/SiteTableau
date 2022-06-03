@@ -7,7 +7,9 @@
 }
 :root{
     --couleur-navigation:#F0E7D9;
+    --couleur-navigation-hover:#eecd97;
     --couleur-panier:#E3CAA2;
+    --couleur-panier-hover:#dbb16c;
 }
 *{
     margin:0;
