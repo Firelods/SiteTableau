@@ -16,7 +16,7 @@ app.use(cors());
 
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://localhost:27017/";
+var url = "mongodb://127.0.0.1:27017/";
 app.listen(8810);
 var dbco;
 MongoClient.connect(url, function (err, db) {
@@ -36,8 +36,8 @@ MongoClient.connect(url, function (err, db) {
 
   //!Recherche par id
   app.get("/select/:id", function (req, res) {
-    dbo.collection("tableau").findOne({'idINT':req.params.id}).then(result =>{
-      if(result.length == 0){
+    dbo.collection("tableau").findOne({'idINT':parseInt(req.params.id)}).then(result =>{
+      if(result==null){
         res.status(404);
       }
       let json = JSON.stringify(result);
