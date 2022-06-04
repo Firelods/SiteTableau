@@ -7,8 +7,9 @@
       <span>Search</span>
     </button>
   </form>
-  <div class="panier"><span class="material-symbols-outlined">
-      shopping_cart</span><a href="#">Panier</a><br><span>Article du panier : {{nbArticle}}</span></div>
+  <div routerLink="/panier" class="panier"><span class="material-symbols-outlined">
+      shopping_cart</span><a>Panier&nbsp;:</a><br><span [@nbArticleUpdated]="nbArticle" id="nbArticlePanier">
+      &nbsp;{{nbArticle}}</span></div>
 </div>
 <nav>
   <ul>
@@ -18,12 +19,12 @@
   </ul>
 </nav>
 <main>
-  <h1>{{title}}</h1>
+  <router-outlet></router-outlet> <!-- Angular Outlet-->
 </main>
 
 
 
-<router-outlet></router-outlet> <!-- Angular Outlet-->
+
 
 
 <footer>

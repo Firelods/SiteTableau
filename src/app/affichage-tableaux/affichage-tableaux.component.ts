@@ -4,7 +4,7 @@ import { TableauService } from '../tableau.service'
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {PanierService} from '../panier.service';
-
+import {AppComponent} from '../app.component';
 @Component({
   selector: 'app-affichage-tableaux',
   templateUrl: './affichage-tableaux.component.html',
@@ -13,10 +13,9 @@ import {PanierService} from '../panier.service';
 
 export class AffichageTableauxComponent implements OnInit {
   tableaux: Tableau[] =[];
-  
   constructor(
     private TableauService: TableauService
-    ,private PanierService: PanierService) { }
+    ,private PanierService: PanierService,private AppComponent: AppComponent) { }
     
   
 
@@ -28,12 +27,10 @@ export class AffichageTableauxComponent implements OnInit {
     .subscribe(tableau => this.tableaux = tableau);
     console.log(this.tableaux)
   }
-  addArticle():void {
-    this.PanierService.addArticle();
+  addArticle(Article:Tableau):void {
+    this.PanierService.addArticle(Article);
     console.log(this.PanierService.getNbArticle());
-    
+    this.AppComponent.updatePanier(this.PanierService.getNbArticle());
   }
-  removeArticle():void {
-    this.PanierService.removeArticle();
-  }
+
 }

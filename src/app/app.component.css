@@ -85,6 +85,10 @@ h1 {
 	background-color:var(--couleur-panier-hover);
 }
 
+#nbArticlePanier{
+	transition: all 0.2s ease;
+}
+
 /*! *************************************************** FOOTER CODE ****************************************************/
 footer{
 	margin-top: 10vh;
