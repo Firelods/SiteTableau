@@ -3,7 +3,7 @@ ul {
   width: 70%;
   /* height:90vh; */
   margin-left: 5%;
-  margin:0 auto;
+  margin: 0 auto;
   background-color: white;
   flex-direction: column;
   justify-content: space-around;
@@ -38,19 +38,35 @@ li a {
   text-decoration: none;
   transition: all 0.2s ease;
 }
-li a:visited, li a{
-  color:black;
+
+li a:visited,
+li a {
+  color: black;
 }
-li a:hover{
+
+li a:hover {
   font-size: 2.5em;
   animation: gelatine 0.5s ease;
 }
 
 @keyframes gelatine {
-  from, to { transform: scale(1, 1); }
-  25% { transform: scale(0.9, 1.1); }
-  50% { transform: scale(1.1, 0.9); }
-  75% { transform: scale(0.95, 1.05); }
+
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 
 table {
@@ -96,7 +112,7 @@ td {
   font-size: 2em;
 }
 
-#textPanier{
+#textPanier {
   /* padding: 10px; */
   padding-left: 20px;
   padding-top: 10px;
@@ -107,15 +123,15 @@ td {
 #ajoutPanier {
   margin-top: 5vh;
   width: 10vw;
-  min-width:130px;
-  max-width:160px;
+  min-width: 130px;
+  max-width: 160px;
   background-color: var(--couleur-navigation);
   border-radius: 12px;
   border: 1px solid gray;
   font-weight: bold;
   font-size: 1em;
   height: 5vh;
-  transition:all 0.2s ease;
+  transition: all 0.2s ease;
   cursor: pointer;
 }
 
@@ -131,11 +147,11 @@ td {
 .couleurHover {
   height: 5vh;
   width: 0vw;
-  max-width:160px;
-  border-radius: 12px;  
+  max-width: 160px;
+  border-radius: 12px;
   z-index: 1;
-  position:absolute;
-  transition:width 0.15s ease-out;
+  position: absolute;
+  transition: width 0.15s ease-out;
   background-color: var(--couleur-navigation-hover);
 }
 
@@ -155,7 +171,7 @@ td {
 }
 
 .grandeImg {
-  z-index:9999;
+  z-index: 9999;
   position: fixed;
   top: 2vh;
   left: 17.5vw;
@@ -177,16 +193,19 @@ td {
 }
 
 @media (max-width:768px) {
-  ul li{
+  ul li {
     flex-direction: column;
   }
+
   li a {
     margin: 0;
   }
+
   li img {
     margin-top: 5vh;
   }
-  li{
+
+  li {
     height: 60vh;
   }
 }

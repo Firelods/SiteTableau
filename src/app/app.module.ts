@@ -5,16 +5,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AffichageTableauxComponent } from './affichage-tableaux/affichage-tableaux.component';
-import { AffichageDescTableauComponent } from './affichage-desc-tableau/affichage-desc-tableau.component';
+import { AffichageDescPhotoComponent } from './affichage-desc-photo/affichage-desc-photo.component';
 import { PanierComponent } from './panier/panier.component';
+import { AffichagePhotosComponent } from './affichage-photos/affichage-photos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AffichageTableauxComponent,
-    AffichageDescTableauComponent,
-    PanierComponent
+    AffichageDescPhotoComponent,
+    PanierComponent,
+    AffichagePhotosComponent
   ],
   imports: [
     BrowserModule,

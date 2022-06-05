@@ -1,13 +1,9 @@
-
-
-
-export interface Tableau {
+export interface Photo {
     _id:string;
-    type:string;
     titre:string;
     prix:number;
     idINT:string;
     auteur:string;
-    date:number;
     dimension:string;
+    categorie:string;
 }

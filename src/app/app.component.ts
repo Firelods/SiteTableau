@@ -15,7 +15,7 @@ import { PanierService } from './panier.service';
   ]
 })
 export class AppComponent {
-  title = 'SiteTableaux';
+  title = 'Christian LEFEVRE Photographies';
   nbArticle:number = 0;
   constructor(private panier:PanierService) {} 
   ngOnInit() {

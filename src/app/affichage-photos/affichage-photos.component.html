@@ -1,0 +1,32 @@
+<ul>
+    <li *ngFor="let photo of photos">
+      <!-- grande div pour img plein écran -->
+  
+      <img onclick="onClick(this)" class="imgTableau" id="c{{photo.idINT}}" src="../../assets/img/{{photo.titre}}.jpg"
+        alt="okusai">
+      <div id="containerCaract">
+        <div id="Etage1">
+          <div id="typePeinture">
+            <p>Type de peinture : {{photo.categorie}}</p>
+          </div>
+          <div id="auteur">
+            <p>Auteur : {{photo.auteur}}</p>
+          </div>
+        </div>
+        <div id="Etage2">
+          <div id="dimensions">Dimensions : {{photo.dimension}}</div>
+        </div>
+      </div>
+      <div id="pricing">
+        <div id="prix"> Prix : {{photo.prix}}€</div>
+        <div id="ajoutPanier" (click)="addArticle(photo)">
+          <div class="couleurHover"></div>
+          <div id="textPanier"> Ajouter au panier</div>
+        </div>
+      </div>
+      <a routerLink="/detail/{{photo.idINT}}">{{photo.titre}}</a>
+    </li>
+  </ul>
+  <div id="divgrande" onclick="this.style.display='none'" class="grandeImg"><img class="imgTableau" id="grande"
+      alt="okusai"></div>
+  

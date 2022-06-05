@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AffichageDescTableauComponent } from './affichage-desc-tableau/affichage-desc-tableau.component';
-import { AffichageTableauxComponent } from './affichage-tableaux/affichage-tableaux.component';
+import { AffichageDescPhotoComponent } from './affichage-desc-photo/affichage-desc-photo.component';
+import { AffichagePhotosComponent } from './affichage-photos/affichage-photos.component';
+
 import { PanierComponent } from './panier/panier.component';
 const routes: Routes = [
   {path: '',redirectTo: '/affichage',pathMatch: 'full'},
-  {path: 'affichage', component: AffichageTableauxComponent},
-  {path: 'detail/:id',component:AffichageDescTableauComponent},
+  {path: 'affichage', component: AffichagePhotosComponent},
+  {path: 'detail/:id',component:AffichageDescPhotoComponent},
   {path: 'panier',component:PanierComponent}
 ];
 
