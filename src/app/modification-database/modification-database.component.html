@@ -1,0 +1,15 @@
+<h2>Formulaire d'insertion de données</h2>
+<form>
+  <label for="avatar">Choisir l'image:</label>
+
+  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+  <label for="titre">Titre : </label><input type="text" #titre (keyup)="onEnterTitre(titre.value)" name="titre">
+  <label for="auteur">Auteur : </label><input type="text" #auteur (keyup)="onEnterAuteur(auteur.value)" name="auteur">
+  <label for="prix">Prix : </label><input type="number" #prix (keyup)="onEnterPrix(prix.value)" name="prix">
+  <label for="categorie">Categorie : </label><input type="text" #categorie (keyup)="onEnterCategorie(categorie.value)"
+    name="categorie">
+  <label for="dimension">Dimension : </label><input type="text" #dimension (keyup)="onEnterDimension(dimension.value)"
+    name="dimension">
+  <div (click)="ajouterArticle()">Ajouter</div>
+  <!--  -->
+</form>

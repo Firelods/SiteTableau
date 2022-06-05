@@ -1,8 +1,8 @@
 export interface Photo {
-    _id:string;
+    _id?:string;
     titre:string;
     prix:number;
-    idINT:string;
+    idINT:number;
     auteur:string;
     dimension:string;
     categorie:string;

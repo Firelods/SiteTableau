@@ -8,7 +8,6 @@ import { Photo } from './photo';
 })
 export class PhotoService {
   private tableauURL="http://db.clement-lefevre.fr"
-  private test="tet"
   constructor(
     private http:HttpClient
   ) { }
@@ -23,5 +22,8 @@ export class PhotoService {
 
   getPhoto(id: number): Observable<Photo>{
     return this.http.get<Photo>(this.tableauURL+"/select/"+id);
+  }
+  getNbPhotos(): Observable<number>{
+    return this.http.get<number>(this.tableauURL+"/len");
   }
 }

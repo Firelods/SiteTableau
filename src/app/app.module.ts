@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { AffichageDescPhotoComponent } from './affichage-desc-photo/affichage-desc-photo.component';
 import { PanierComponent } from './panier/panier.component';
 import { AffichagePhotosComponent } from './affichage-photos/affichage-photos.component';
+import { ModificationDatabaseComponent } from './modification-database/modification-database.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AffichageDescPhotoComponent,
     PanierComponent,
-    AffichagePhotosComponent
+    AffichagePhotosComponent,
+    ModificationDatabaseComponent
   ],
   imports: [
     BrowserModule,

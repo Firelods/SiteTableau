@@ -78,8 +78,6 @@ td {
   border: 1px solid #333;
 }
 
-#typePeinture,
-#auteur {}
 
 #containerCaract {
   display: flex;
@@ -88,9 +86,6 @@ td {
   flex-wrap: wrap;
 }
 
-#auteur {
-  /* margin-right:20vw; */
-}
 
 #Etage1,
 #Etage2 {
@@ -135,9 +130,6 @@ td {
   cursor: pointer;
 }
 
-#ajoutPanier:hover {
-  /* background-color: var(--couleur-navigation-hover); */
-}
 
 #ajoutPanier:hover .couleurHover {
   width: 10vw;
