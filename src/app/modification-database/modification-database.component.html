@@ -2,7 +2,7 @@
 <form>
   <label for="avatar">Choisir l'image:</label>
 
-  <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+  <input type="file" id="avatar" (change)="setImageToSend($event)" name="imgSent" accept="image/png, image/jpeg">
   <label for="titre">Titre : </label><input type="text" #titre (keyup)="onEnterTitre(titre.value)" name="titre">
   <label for="auteur">Auteur : </label><input type="text" #auteur (keyup)="onEnterAuteur(auteur.value)" name="auteur">
   <label for="prix">Prix : </label><input type="number" #prix (keyup)="onEnterPrix(prix.value)" name="prix">

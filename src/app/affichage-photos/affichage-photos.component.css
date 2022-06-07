@@ -201,3 +201,24 @@ td {
     height: 60vh;
   }
 }
+
+.portrait{
+  max-width:25vh !important;
+}
+
+@media (max-width:768px) {
+  #containerCaract {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+  #containerCaract div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  li img{
+    margin-left: 0;
+  }
+}
+  

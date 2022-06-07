@@ -1,3 +1,4 @@
+
 <ul>
     <li *ngFor="let photo of photos">
       <!-- grande div pour img plein écran -->
@@ -29,4 +30,13 @@
   </ul>
   <div id="divgrande" onclick="this.style.display='none'" class="grandeImg"><img class="imgTableau" id="grande"
       alt="okusai"></div>
-  
+  <script> document.addEventListener("DOMContentLoaded", function () {
+
+    $('img').each(function(){
+        if ($(this).width()/$(this).height() >= 1) {
+            $(this).addClass('landscape');
+        } else {
+            $(this).addClass('portrait');
+        }
+    });
+});</script>
