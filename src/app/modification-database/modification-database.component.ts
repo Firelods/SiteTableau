@@ -19,6 +19,7 @@ export class ModificationDatabaseComponent implements OnInit {
   photo: Photo={auteur:"",titre:"",dimension:"",categorie:"",prix:0,idINT:0};
   imageToSend: string = "";
   formData: any;
+  file:File | undefined;
   private photoURL="http://db.clement-lefevre.fr"
   
   constructor(private http:HttpClient,private photoService:PhotoService) { }
@@ -34,22 +35,23 @@ export class ModificationDatabaseComponent implements OnInit {
   
 
   setImageToSend(event: any){
-    const file:File = event.target.files[0];
-    console.log(file);
+    this.file = event.target.files[0];
+    console.log(this.file);
     this.formData = new FormData();
     console.log(this.formData);
-    this.formData.append("imgSent", file);
-    console.log(this.formData.getAll("imgSent"));
+    
     
     
     
   }
 
   ajouterArticle(): void {
-    // this.formData.append("titre", this.photo.titre);
+    this.formData.append("titre", this.photo.titre);
+    this.formData.append("imgSent", this.file);
+    console.log(this.formData.getAll("imgSent"));
     this.http.post(this.photoURL+"/addImage", this.formData).subscribe(tableau => console.log(tableau));
     console.log(this.photo);
-    // this.http.post<Photo>(this.photoURL+"/add",this.photo).subscribe(tableau => console.log(tableau));
+    this.http.post<Photo>(this.photoURL+"/add",this.photo).subscribe(tableau => console.log(tableau));
     window.alert("Photo added successfully");
   }
 }

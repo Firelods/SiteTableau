@@ -3,8 +3,8 @@
     <li *ngFor="let photo of photos">
       <!-- grande div pour img plein écran -->
   
-      <img onclick="onClick(this)" class="imgTableau" id="c{{photo.idINT}}" src="../../assets/img/{{photo.titre}}.jpg"
-        alt="okusai">
+      <div class="image"><img onclick="onClick(this)" class="imgTableau" id="c{{photo.idINT}}" src="../../assets/img/{{photo.titre}}.jpg"
+        alt="okusai"></div>
       <div id="containerCaract">
         <div id="Etage1">
           <div id="typePeinture">
@@ -20,7 +20,7 @@
       </div>
       <div id="pricing">
         <div id="prix"> Prix : {{photo.prix}}€</div>
-        <div id="ajoutPanier" (click)="addArticle(photo)">
+        <div id="ajoutPanier"  (click)="addArticle(photo)">
           <div class="couleurHover"></div>
           <div id="textPanier"> Ajouter au panier</div>
         </div>
@@ -30,13 +30,4 @@
   </ul>
   <div id="divgrande" onclick="this.style.display='none'" class="grandeImg"><img class="imgTableau" id="grande"
       alt="okusai"></div>
-  <script> document.addEventListener("DOMContentLoaded", function () {
-
-    $('img').each(function(){
-        if ($(this).width()/$(this).height() >= 1) {
-            $(this).addClass('landscape');
-        } else {
-            $(this).addClass('portrait');
-        }
-    });
-});</script>
+  

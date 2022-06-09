@@ -29,6 +29,16 @@ li img {
   max-width: 40vh;
 }
 
+.imgTableau{
+  /* transition: transform 0.2s ease; */
+  
+}
+.Cloned{
+  transition:all 1s ease;
+  margin: 0 !important;
+  left: 20vw;
+}
+
 li a {
   margin-left: 25vw;
   font-size: 2em;
