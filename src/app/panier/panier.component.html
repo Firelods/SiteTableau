@@ -1,10 +1,15 @@
 <h2>Votre Panier</h2>
 <section id="affichageProduits">
   <div *ngFor="let tableau of this.PanierService.getArticles() "><img class="imgPanier"
-      src="../../assets/img/{{tableau.titre}}.jpg" alt="{{tableau.titre}}"><div><span>{{tableau.titre}}</span>
-    <div class="prix">{{tableau.prix}}</div><span id="croixFermeture"(click)="this.PanierService.removeArticle(tableau);this.AppComponent.updatePanier(this.PanierService.getNbArticle());" class="material-symbols-outlined">
+      src="../../assets/img/{{tableau.titre}}.jpg" alt="{{tableau.titre}}">
+    <div><span>{{tableau.titre}}</span>
+      <div class="prix">{{tableau.prix}}</div><span id="croixFermeture"
+        (click)="this.PanierService.removeArticle(tableau);this.AppComponent.updatePanier(this.PanierService.getNbArticle());"
+        class="material-symbols-outlined">
         close
-        </span></div>
+      </span>
+    </div>
   </div>
 </section>
-<div *ngIf="this.PanierService.getTotalPanier()>0" id="prixTotal">Total de votre panier : {{this.PanierService.getTotalPanier()}}</div>
+<div *ngIf="this.PanierService.getTotalPanier()>0" id="prixTotal">Total de votre panier :
+  {{this.PanierService.getTotalPanier()}}</div>

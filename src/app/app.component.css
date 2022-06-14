@@ -111,7 +111,7 @@ footer ul li:first-of-type{
 }
 footer div#listeFooter{
 	display:flex;
-	width:100vw;
+	/* width:100vw; */
 	justify-content:space-around;
 }
 #copyright{
@@ -127,7 +127,7 @@ footer div#listeFooter{
         margin-left: 25vw;
         margin-right: 25vw;
         display: flex;
-        height: 34vh;
+        height: 41vh;
         flex-direction: column;
         align-items: center;
     }

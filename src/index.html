@@ -30,11 +30,26 @@
 <body>
   <script type="text/javascript">
     function onClick(element) {
-      console.log("onclick proc1");
+      console.log("onclick proc1aza");
+      document.getElementById("divgrande").style.width="65vw";
       document.getElementById("grande").src = element.src;
       console.log(document.getElementById("grande").src);
+      document.getElementById("croixPhoto").style.display="inline-block";
       document.getElementById("divgrande").style.display = "block";
     }
+    function sleep(milliseconds) {
+      const date = Date.now();
+      let currentDate = null;
+      do {
+        currentDate = Date.now();
+      } while (currentDate - date < milliseconds);
+    }
+    function fermetureCroix(){
+      //document.getElementById("divgrande").style.animation=" animatefermeture 1s";
+      
+      document.getElementById("divgrande").style.width="0px";
+      document.getElementById("croixPhoto").style.display="none";
+  }
 
   </script>
   <app-root></app-root>
